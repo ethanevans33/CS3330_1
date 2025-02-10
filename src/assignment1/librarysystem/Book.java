@@ -40,7 +40,7 @@ public class Book {
 	 * @param other
 	 * 			This argument is a book object that is being copied
 	 */
-	public void copy(Book other) {
+	public Book(Book other) {
 		this.title = other.title;
 		this.author = other.author;
 		this.ISBN = other.ISBN;
@@ -93,7 +93,15 @@ public class Book {
 	 * 			Returns false if two books do not have the same ISBN.
 	 */
 	public boolean equals(Book other) {
-		return false;
+		if(other == null) {
+			return false;
+		}
+		if(this.ISBN.equals(other.ISBN)) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
