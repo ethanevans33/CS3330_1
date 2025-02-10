@@ -58,6 +58,16 @@ public class Library {
 	 * 			Returns null if the book object is not found
 	 */
 	public Book searchByISBN(String ISBN) {
+		if(ISBN == null) {
+			return null;
+		}
+		
+		for(int i = 0; i < count; i++) {
+			if(books[i].getISBN().equals(ISBN)) {
+				return new Book(books[i]);
+			}
+		}
+		
 		return null;
 	}
 	
