@@ -97,7 +97,7 @@ public class Library {
 		
 		System.out.println("All books in the library:");
 		for(int i = 0; i < count; i++) {
-			System.out.println(+count+ ". " +books[i].toString());
+			System.out.println((i+1) + ". " + books[i].toString());
 		}
 	}
 
