@@ -11,7 +11,10 @@ public class Book {
 	 * This is a default constructor that initializes title, author, and ISBN to "Unknown" and price to 0.0.
 	 */
 	public Book() {
-		
+		this.title = "Unknown";
+		this.author = "Unknown";
+		this.ISBN = "Unknown";
+		this.price = 0.0;
 	}
 
 	/**
