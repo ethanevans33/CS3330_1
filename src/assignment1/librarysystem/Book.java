@@ -92,11 +92,12 @@ public class Book {
 	 * 			Returns true if two books have the same ISBN. 
 	 * 			Returns false if two books do not have the same ISBN.
 	 */
-	public boolean equals(Book other) {
+	@Override
+	public boolean equals(Object other) {
 		if(other == null) {
 			return false;
 		}
-		if(this.ISBN.equals(other.ISBN)) {
+		if(this.ISBN.equals(((Book)other).ISBN)) {
 			return true;
 		}
 		else {
