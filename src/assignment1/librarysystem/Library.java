@@ -16,13 +16,25 @@ public class Library {
 	/**
 	 * This is a parameterized method that adds a book to the array (if there is space).
 	 * @param book
-	 * 			This argument is a book object
+	 * 			This argument is the book object to add
 	 * @return
 	 * 			Returns true if the book was added properly.
 	 * 			Returns false if the book could not be added.
 	 */
 	public boolean addBook(Book book) {
+		if(book == null || count >= 5) {
 			return false;
+		}
+		
+		for(int i = 0; i < count; i++) {
+			if(books[i].equals(book)) {
+				return false;
+			}
+		}
+		
+		books[count] = new Book(book);
+		count++;
+		return true;
 	}
 	
 	/**
