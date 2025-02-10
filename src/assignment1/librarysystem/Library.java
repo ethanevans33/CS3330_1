@@ -6,6 +6,14 @@ public class Library {
 	private int count;
 	
 	/**
+	 * This is a default constructor that initializes books with a fixed size of 5 and count to 0.
+	 */
+	public Library() {
+		books = new Book[5];
+		count = 0;
+	}
+	
+	/**
 	 * This is a parameterized method that adds a book to the array (if there is space).
 	 * @param book
 	 * 			This argument is a book object
@@ -14,7 +22,7 @@ public class Library {
 	 * 			Returns false if the book could not be added.
 	 */
 	public boolean addBook(Book book) {
-		return false;
+			return false;
 	}
 	
 	/**
