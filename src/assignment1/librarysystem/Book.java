@@ -37,11 +37,14 @@ public class Book {
 	
 	/**
 	 * This is a parameterized copy constructor that creates a new Book object from another Book.
-	 * @param book
-	 * 			This argument is a book object
+	 * @param other
+	 * 			This argument is a book object that is being copied
 	 */
-	public void copy(Book book) {
-		
+	public void copy(Book other) {
+		this.title = other.title;
+		this.author = other.author;
+		this.ISBN = other.ISBN;
+		this.price = other.price;
 	}
 
 	public String getTitle() {
